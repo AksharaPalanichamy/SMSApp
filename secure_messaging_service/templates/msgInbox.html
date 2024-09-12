@@ -1,0 +1,12 @@
+<h1>Inbox</h1>
+<ul>
+    {% for message in messages %}
+    <li>
+        From: {{ message.sender.username }}<br>
+        Message: {{ message.content }}<br>
+        Sent at: {{ message.timestamp }}
+    </li>
+    {% empty %}
+    <li>No messages</li>
+    {% endfor %}
+</ul>
